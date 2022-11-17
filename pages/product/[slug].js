@@ -19,6 +19,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
           <div className="small-images-container">{
             image?.map((item, i) => (<img
+            key={i}
               src={urlFor(item)}
               className={i === index ? 'small-image selected-image' : 'small-image'}
               onMouseEnter={() => setIndex(i)}
@@ -91,7 +92,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-  const productsQuery = '*[_type== "product"]';
+  const productsQuery = `*[_type== "product"]`;
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
