@@ -531,17 +531,18 @@ padding: 6px;
   padding: 6px 12px;
   cursor: pointer;
 }
-.quantity-desc .minus{
-  border-right: 1px solid gray;
+.quantity-desc .minus {
   color: #f02d34;
 }
-.quantity-desc .num{
+
+.quantity-desc .num {
   border-right: 1px solid gray;
   font-size: 20px;
+  border-left: 1px solid gray;
 }
-.quantity-desc .plus{
-  color: rgb(49, 168, 49);
 
+.quantity-desc .plus {
+  color: rgb(49, 168, 49);
 }
 
 .maylike-products-wrapper{
